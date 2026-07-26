@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Soporte y contacto de Twins Rent Car.">
+<title>Twins Rent Car — Soporte</title>
+<style>
+  :root{
+    --accent:#F2A20C; --accent-strong:#E08900; --wa:#25D366;
+    --bg:#F4F3F1; --surface:#FFFFFF; --ink:#191712; --muted:#6C685F; --line:#E5E2DB;
+    --chip:rgba(242,162,12,.12); --shadow:0 1px 2px rgba(20,16,8,.04),0 12px 32px rgba(20,16,8,.06);
+  }
+  @media (prefers-color-scheme:dark){:root{--bg:#0D0E11;--surface:#15161B;--ink:#ECECEF;--muted:#8B8D96;--line:#24262E;--chip:rgba(242,162,12,.16);--shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.5)}}
+  :root[data-theme="dark"]{--bg:#0D0E11;--surface:#15161B;--ink:#ECECEF;--muted:#8B8D96;--line:#24262E;--chip:rgba(242,162,12,.16)}
+  :root[data-theme="light"]{--bg:#F4F3F1;--surface:#FFFFFF;--ink:#191712;--muted:#6C685F;--line:#E5E2DB;--chip:rgba(242,162,12,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:600px;margin:0 auto;padding:64px 24px 80px}
+  .rule{width:46px;height:4px;border-radius:3px;background:var(--accent);margin-bottom:22px}
+  .brand{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+  h1{font-size:clamp(30px,6vw,40px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin:0 0 12px;text-wrap:balance}
+  .lede{color:var(--muted);font-size:17px;margin:0 0 30px;max-width:52ch}
+  .toggle{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px;box-shadow:var(--shadow);margin-bottom:26px}
+  .toggle button{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:12.5px;font-weight:700;letter-spacing:.04em;padding:6px 14px;border-radius:999px;cursor:pointer}
+  .toggle button[aria-pressed="true"]{background:var(--accent);color:#1a1204}
+  .toggle button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .card{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
+  .card:hover{transform:translateY(-1px);border-color:var(--accent)}
+  .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .ico{flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center}
+  .ico.wa{background:rgba(37,211,102,.14)}
+  .ico.mail{background:var(--chip)}
+  .ico svg{width:26px;height:26px}
+  .lbl{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+  .val{font-size:18px;font-weight:800;letter-spacing:-.01em}
+  .arrow{margin-left:auto;color:var(--muted);font-size:20px}
+  .meta{margin-top:26px;color:var(--muted);font-size:14px;line-height:1.7}
+  .meta strong{color:var(--ink)}
+  footer{margin-top:38px;color:var(--muted);font-size:13px;line-height:1.7;border-top:1px solid var(--line);padding-top:22px}
+  footer strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="rule"></div>
+  <p class="brand">Twins Rent Car</p>
+  <h1 data-t="title">Soporte</h1>
+  <p class="lede" data-t="lede">¿Necesitas ayuda con tu reserva o tienes una pregunta? Escríbenos — respondemos rápido.</p>
+
+  <div class="toggle" role="group" aria-label="Idioma / Language">
+    <button id="btn-es" aria-pressed="true" onclick="setLang('es')">ES</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">EN</button>
+  </div>
+
+  <a class="card" href="https://wa.me/19544452331">
+    <span class="ico wa"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.35-.5.04-.5.4-3.16-.66-2.67-1.06-4.35-3.8-4.48-3.97-.13-.18-1.07-1.43-1.07-2.72 0-1.3.68-1.93.92-2.2.24-.26.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.59.45.24.57.8 1.97.87 2.11.07.13.12.29.02.47-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.28-.12.54.15.26.66 1.09 1.42 1.76.98.87 1.8 1.14 2.06 1.27.26.13.41.11.57-.07.16-.18.66-.77.83-1.03.18-.26.35-.22.59-.13.24.09 1.53.72 1.79.85.26.13.44.2.5.31.06.11.06.63-.18 1.31z"/></svg></span>
+    <span><span class="lbl">WhatsApp</span><span class="val">+1 (954) 445-2331</span></span>
+    <span class="arrow">›</span>
+  </a>
+
+  <a class="card" href="mailto:contacto@twinsrentcar.com">
+    <span class="ico mail"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+    <span><span class="lbl" data-t="emailLbl">Correo</span><span class="val">contacto@twinsrentcar.com</span></span>
+    <span class="arrow">›</span>
+  </a>
+
+  <p class="meta" data-t="hours"><strong>Horario:</strong> Lunes a domingo, 8:00 a.m. – 8:00 p.m. (hora de RD). Entrega y recogida en aeropuerto.</p>
+
+  <footer>
+    <strong>Twins Rent Car</strong> · Santiago de los Caballeros, República Dominicana<br>
+    © 2026 Twins Rent Car. <span data-t="rights">Todos los derechos reservados.</span>
+  </footer>
+</div>
+<script>
+  var I18N={
+    es:{title:"Soporte",lede:"¿Necesitas ayuda con tu reserva o tienes una pregunta? Escríbenos — respondemos rápido.",emailLbl:"Correo",hours:"<strong>Horario:</strong> Lunes a domingo, 8:00 a.m. – 8:00 p.m. (hora de RD). Entrega y recogida en aeropuerto.",rights:"Todos los derechos reservados."},
+    en:{title:"Support",lede:"Need help with your booking or have a question? Message us — we reply fast.",emailLbl:"Email",hours:"<strong>Hours:</strong> Monday to Sunday, 8:00 a.m. – 8:00 p.m. (DR time). Airport delivery and return.",rights:"All rights reserved."}
+  };
+  function setLang(l){var d=I18N[l];document.documentElement.setAttribute("lang",l);
+    document.querySelectorAll("[data-t]").forEach(function(e){var v=d[e.getAttribute("data-t")];if(v==null)return;if(e.classList.contains("meta"))e.innerHTML=v;else e.textContent=v;});
+    document.getElementById("btn-es").setAttribute("aria-pressed",String(l==="es"));
+    document.getElementById("btn-en").setAttribute("aria-pressed",String(l==="en"));
+    try{document.title="Twins Rent Car — "+d.title}catch(e){}}
+</script>
+</body>
+</html>
