@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Politica de Privacidad de Twins Rent Car.">
+<title>Twins Rent Car — Política de Privacidad</title>
+<style>
+  :root {
+    --accent: #F2A20C;
+    --accent-strong: #E08900;
+    /* Light theme (default) — warm-biased neutrals */
+    --bg: #F4F3F1;
+    --surface: #FFFFFF;
+    --ink: #191712;
+    --muted: #6C685F;
+    --line: #E5E2DB;
+    --chip-bg: rgba(242,162,12,0.12);
+    --shadow: 0 1px 2px rgba(20,16,8,.04), 0 12px 32px rgba(20,16,8,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0D0E11;
+      --surface: #15161B;
+      --ink: #ECECEF;
+      --muted: #8B8D96;
+      --line: #24262E;
+      --chip-bg: rgba(242,162,12,0.16);
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 16px 40px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0D0E11; --surface: #15161B; --ink: #ECECEF; --muted: #8B8D96;
+    --line: #24262E; --chip-bg: rgba(242,162,12,0.16);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 16px 40px rgba(0,0,0,.5);
+  }
+  :root[data-theme="light"] {
+    --bg: #F4F3F1; --surface: #FFFFFF; --ink: #191712; --muted: #6C685F;
+    --line: #E5E2DB; --chip-bg: rgba(242,162,12,0.12);
+    --shadow: 0 1px 2px rgba(20,16,8,.04), 0 12px 32px rgba(20,16,8,.06);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 88px; }
+
+  /* Header */
+  header { padding: 56px 0 8px; }
+  .rule { width: 46px; height: 4px; border-radius: 3px; background: var(--accent); margin-bottom: 22px; }
+  .brand {
+    font-size: 12px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(30px, 6vw, 42px); line-height: 1.08; letter-spacing: -0.025em;
+    font-weight: 800; margin: 0 0 14px; text-wrap: balance;
+  }
+  .lede { color: var(--muted); font-size: 17px; margin: 0; max-width: 60ch; }
+
+  .meta {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+    margin-top: 26px; padding-bottom: 28px; border-bottom: 1px solid var(--line);
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--chip-bg); color: var(--accent-strong);
+    border: 1px solid rgba(242,162,12,.28);
+    padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  :root[data-theme="dark"] .pill, .pill { }
+  @media (prefers-color-scheme: dark) { .pill { color: var(--accent); } }
+  :root[data-theme="dark"] .pill { color: var(--accent); }
+  :root[data-theme="light"] .pill { color: var(--accent-strong); }
+
+  .toggle { margin-left: auto; display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; box-shadow: var(--shadow); }
+  .toggle button {
+    appearance: none; border: 0; background: transparent; color: var(--muted);
+    font: inherit; font-size: 12.5px; font-weight: 700; letter-spacing: .04em;
+    padding: 6px 14px; border-radius: 999px; cursor: pointer; transition: color .15s;
+  }
+  .toggle button[aria-pressed="true"] { background: var(--accent); color: #1a1204; }
+  .toggle button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Sections */
+  main { margin-top: 8px; }
+  section { padding: 30px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  .head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .num {
+    flex: none; width: 34px; height: 34px; border-radius: 9px;
+    background: var(--chip-bg); color: var(--accent-strong);
+    display: grid; place-items: center; font-weight: 800; font-size: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-color-scheme: dark) { .num { color: var(--accent); } }
+  :root[data-theme="dark"] .num { color: var(--accent); }
+  :root[data-theme="light"] .num { color: var(--accent-strong); }
+  h2 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  section p { margin: 0 0 10px; }
+  section p:last-child { margin-bottom: 0; }
+  ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+  li { position: relative; padding-left: 20px; color: var(--ink); }
+  li::before { content: ""; position: absolute; left: 3px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .note { color: var(--muted); font-size: 15px; margin-top: 12px; }
+  a { color: var(--accent-strong); font-weight: 700; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: currentColor; }
+  @media (prefers-color-scheme: dark) { a { color: #FFB43C; } }
+  :root[data-theme="dark"] a { color: #FFB43C; }
+  :root[data-theme="light"] a { color: var(--accent-strong); }
+
+  /* Contact card */
+  .contact { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; margin-top: 8px; box-shadow: var(--shadow); }
+  .contact .rows { display: grid; gap: 10px; margin-top: 14px; }
+  .crow { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+  .crow .ico { flex: none; width: 34px; height: 34px; border-radius: 9px; background: var(--chip-bg); display: grid; place-items: center; }
+  .crow .ico svg { width: 18px; height: 18px; }
+  .crow .lbl { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1.4; }
+
+  footer { margin-top: 40px; color: var(--muted); font-size: 13.5px; line-height: 1.7; }
+  footer strong { color: var(--ink); font-weight: 700; }
+
+  [hidden] { display: none !important; }
+  @media (max-width: 480px) {
+    header { padding-top: 40px; }
+    .toggle { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="rule"></div>
+    <p class="brand">Twins Rent Car</p>
+    <h1 data-t="title">Política de Privacidad</h1>
+    <p class="lede" data-t="lede">En Twins Rent Car valoramos tu privacidad. Esta política explica qué datos recopilamos en la aplicación, cómo los usamos y tus derechos sobre ellos.</p>
+    <div class="meta">
+      <span class="pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span data-t="updated">Última actualización: 26 de julio de 2026</span>
+      </span>
+      <div class="toggle" role="group" aria-label="Idioma / Language">
+        <button id="btn-es" aria-pressed="true" onclick="setLang('es')">ES</button>
+        <button id="btn-en" aria-pressed="false" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="head"><span class="num">1</span><h2 data-t="h1">Datos que recopilamos</h2></div>
+      <ul data-t="p1">
+        <li>Datos de tu cuenta: nombre, correo electrónico y teléfono.</li>
+        <li>Datos de la reserva: vehículo elegido, fechas y aeropuerto de recogida/devolución.</li>
+        <li>Favoritos que marcas en la app.</li>
+      </ul>
+      <p class="note" data-t="p1b">No procesamos pagos dentro de la aplicación.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">2</span><h2 data-t="h2">Cómo usamos tus datos</h2></div>
+      <p data-t="p2">Usamos tus datos únicamente para gestionar tu reserva y contactarte. Al tocar “Reservar ahora”, se abre WhatsApp con un mensaje que incluye los datos de tu reserva y tu nombre/teléfono, para que el equipo confirme la disponibilidad contigo.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">3</span><h2 data-t="h3">Permisos del dispositivo</h2></div>
+      <ul data-t="p3">
+        <li>Fotos: solo el administrador del negocio las usa para subir imágenes de los vehículos.</li>
+        <li>Notificaciones: opcionales, para avisarte sobre tus reservas. Puedes desactivarlas cuando quieras.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">4</span><h2 data-t="h4">Compartir información</h2></div>
+      <p data-t="p4">No vendemos tus datos. La información de tu reserva se envía únicamente a Twins Rent Car a través de WhatsApp cuando tú decides reservar. WhatsApp procesa el mensaje según su propia política de privacidad.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">5</span><h2 data-t="h5">Almacenamiento</h2></div>
+      <p data-t="p5">Tus datos se guardan en tu dispositivo y, si el negocio lo habilita, en un servidor seguro (Firebase de Google) para gestionar las reservas. Conservamos los datos mientras tu cuenta esté activa.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">6</span><h2 data-t="h6">Tus derechos</h2></div>
+      <p data-t="p6">Puedes acceder y editar tus datos desde tu perfil. Puedes eliminar tu cuenta en cualquier momento desde Perfil → “Eliminar cuenta”; esto borra tus datos de la aplicación de forma permanente.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">7</span><h2 data-t="h7">Menores de edad</h2></div>
+      <p data-t="p7">La aplicación está dirigida a personas mayores de 18 años con licencia de conducir válida.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">8</span><h2 data-t="h8">Cambios</h2></div>
+      <p data-t="p8">Podemos actualizar esta política. Publicaremos los cambios en esta misma página con una nueva fecha de actualización.</p>
+    </section>
+
+    <section>
+      <div class="head"><span class="num">9</span><h2 data-t="h9">Contacto</h2></div>
+      <p data-t="p9">¿Dudas sobre tu privacidad? Escríbenos:</p>
+      <div class="contact">
+        <div class="rows">
+          <div class="crow">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.35-.5.04-.5.4-3.16-.66-2.67-1.06-4.35-3.8-4.48-3.97-.13-.18-1.07-1.43-1.07-2.72 0-1.3.68-1.93.92-2.2.24-.26.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.59.45.24.57.8 1.97.87 2.11.07.13.12.29.02.47-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.28-.12.54.15.26.66 1.09 1.42 1.76.98.87 1.8 1.14 2.06 1.27.26.13.41.11.57-.07.16-.18.66-.77.83-1.03.18-.26.35-.22.59-.13.24.09 1.53.72 1.79.85.26.13.44.2.5.31.06.11.06.63-.18 1.31z"/></svg></span>
+            <div><span class="lbl">WhatsApp</span><a href="https://wa.me/19544452331">+1 (954) 445-2331</a></div>
+          </div>
+          <div class="crow">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <div><span class="lbl" data-t="emailLbl">Correo</span><a href="mailto:contacto@twinsrentcar.com">contacto@twinsrentcar.com</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Twins Rent Car</strong> · Santiago de los Caballeros, República Dominicana<br>
+    © 2026 Twins Rent Car. <span data-t="rights">Todos los derechos reservados.</span>
+  </footer>
+</div>
+
+<script>
+  var I18N = {
+    en: {
+      title: "Privacy Policy",
+      lede: "At Twins Rent Car we value your privacy. This policy explains what data we collect in the app, how we use it and your rights over it.",
+      updated: "Last updated: July 26, 2026",
+      h1: "Data we collect",
+      p1: ["Your account data: name, email and phone.", "Reservation data: chosen vehicle, dates and pick-up/drop-off airport.", "Favorites you mark in the app."],
+      p1b: "We do not process payments inside the app.",
+      h2: "How we use your data",
+      p2: "We use your data only to manage your reservation and to contact you. When you tap “Book now”, WhatsApp opens with a message that includes your reservation details and your name/phone, so the team can confirm availability with you.",
+      h3: "Device permissions",
+      p3: ["Photos: only the business administrator uses them to upload vehicle images.", "Notifications: optional, to keep you posted about your reservations. You can turn them off anytime."],
+      h4: "Sharing information",
+      p4: "We do not sell your data. Your reservation information is sent only to Twins Rent Car through WhatsApp when you choose to book. WhatsApp processes the message under its own privacy policy.",
+      h5: "Storage",
+      p5: "Your data is stored on your device and, if the business enables it, on a secure server (Google Firebase) to manage reservations. We keep the data while your account is active.",
+      h6: "Your rights",
+      p6: "You can access and edit your data from your profile. You can delete your account at any time from Profile → “Delete account”; this permanently erases your data from the app.",
+      h7: "Minors",
+      p7: "The app is intended for people over 18 years old with a valid driver’s license.",
+      h8: "Changes",
+      p8: "We may update this policy. We will post changes on this same page with a new update date.",
+      h9: "Contact",
+      p9: "Questions about your privacy? Write to us:",
+      emailLbl: "Email",
+      rights: "All rights reserved."
+    },
+    es: {
+      title: "Política de Privacidad",
+      lede: "En Twins Rent Car valoramos tu privacidad. Esta política explica qué datos recopilamos en la aplicación, cómo los usamos y tus derechos sobre ellos.",
+      updated: "Última actualización: 26 de julio de 2026",
+      h1: "Datos que recopilamos",
+      p1: ["Datos de tu cuenta: nombre, correo electrónico y teléfono.", "Datos de la reserva: vehículo elegido, fechas y aeropuerto de recogida/devolución.", "Favoritos que marcas en la app."],
+      p1b: "No procesamos pagos dentro de la aplicación.",
+      h2: "Cómo usamos tus datos",
+      p2: "Usamos tus datos únicamente para gestionar tu reserva y contactarte. Al tocar “Reservar ahora”, se abre WhatsApp con un mensaje que incluye los datos de tu reserva y tu nombre/teléfono, para que el equipo confirme la disponibilidad contigo.",
+      h3: "Permisos del dispositivo",
+      p3: ["Fotos: solo el administrador del negocio las usa para subir imágenes de los vehículos.", "Notificaciones: opcionales, para avisarte sobre tus reservas. Puedes desactivarlas cuando quieras."],
+      h4: "Compartir información",
+      p4: "No vendemos tus datos. La información de tu reserva se envía únicamente a Twins Rent Car a través de WhatsApp cuando tú decides reservar. WhatsApp procesa el mensaje según su propia política de privacidad.",
+      h5: "Almacenamiento",
+      p5: "Tus datos se guardan en tu dispositivo y, si el negocio lo habilita, en un servidor seguro (Firebase de Google) para gestionar las reservas. Conservamos los datos mientras tu cuenta esté activa.",
+      h6: "Tus derechos",
+      p6: "Puedes acceder y editar tus datos desde tu perfil. Puedes eliminar tu cuenta en cualquier momento desde Perfil → “Eliminar cuenta”; esto borra tus datos de la aplicación de forma permanente.",
+      h7: "Menores de edad",
+      p7: "La aplicación está dirigida a personas mayores de 18 años con licencia de conducir válida.",
+      h8: "Cambios",
+      p8: "Podemos actualizar esta política. Publicaremos los cambios en esta misma página con una nueva fecha de actualización.",
+      h9: "Contacto",
+      p9: "¿Dudas sobre tu privacidad? Escríbenos:",
+      emailLbl: "Correo",
+      rights: "Todos los derechos reservados."
+    }
+  };
+
+  function setLang(lang) {
+    var d = I18N[lang];
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll("[data-t]").forEach(function (el) {
+      var v = d[el.getAttribute("data-t")];
+      if (v == null) return;
+      if (Array.isArray(v)) {
+        el.innerHTML = v.map(function (li) { return "<li>" + li + "</li>"; }).join("");
+      } else {
+        el.textContent = v;
+      }
+    });
+    document.getElementById("btn-es").setAttribute("aria-pressed", String(lang === "es"));
+    document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+    try { document.title = "Twins Rent Car — " + d.title; } catch (e) {}
+  }
+</script>
+</body>
+</html>
